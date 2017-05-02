@@ -20,6 +20,6 @@ while True:
     data, ADDR = udpCliSock.recvfrom(BUFSIZ)
     if not data:
         break
-    print data
+    print(data)
 
 udpCliSock.close()
