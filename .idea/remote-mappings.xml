@@ -10,6 +10,7 @@
             </list>
           </settings>
         </remote-mappings>
+        <remote-mappings server-id="python@sftp://pi@192.168.0.106:22/home/pi/myVirtualEnv/bin/python" />
       </list>
     </list>
   </component>

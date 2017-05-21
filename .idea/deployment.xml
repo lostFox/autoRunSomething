@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="'py27@pi'">
+  <component name="PublishConfigData" autoUpload="Always" serverName="p2@p2">
     <serverData>
-      <paths name="'py27@pi'">
+      <paths name="p2@p2">
         <serverdata>
           <mappings>
             <mapping deploy="/home/james/projectPy" local="$PROJECT_DIR$" web="/" />
