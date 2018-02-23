@@ -17,6 +17,7 @@ def collatz(num):
         num = num*3+1
     return collatz(num)
 
-print(collatz(3))
-for i in range(1, 1000000):
-   print(i, collatz(i))
+# print(collatz(3))
+for i in range(1, 10000):
+    if(collatz(i) == True):
+        print(i, collatz(i))
