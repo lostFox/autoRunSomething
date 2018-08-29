@@ -8,24 +8,69 @@ import json
 import getAT
 
 menu = {
-	"button":
-	[
-		{
-			"type":"click",
-			"name":"公司概况",
-			"key":"key0"
-		},
-		{
-			"type":"click",
-			"name":"人员查询",
-			"key":"key1"
-		},
-		{
-			"type":"click",
-			"name":"客户服务",
-			"key":"key2"
-		}
-	]
+    "button":[
+        {
+            "name":"公司概况",
+            "sub_button":
+            [
+                {
+                    "type":"click",
+                    "name":"公司简介",
+                    "key":"key00"
+                },
+                {
+                    "type":"click",
+                    "name":"业务范围",
+                    "key":"key01"
+                }
+            ]
+        },
+        {
+            "name":"人员查询",
+            "sub_button":
+            [
+                {
+                    "type":"click",
+                    "name":"珲春公司",
+                    "key":"key10"
+                },
+                {
+                    "type":"click",
+                    "name":"图们公司",
+                    "key":"key11"
+                },
+                {
+                    "type":"click",
+                    "name":"龙井公司",
+                    "key":"key12"
+                },
+                {
+                    "type":"click",
+                    "name":"延吉公司",
+                    "key":"key13"
+                },
+
+            ]
+        },
+        {
+            "name":"客户服务",
+            "sub_button":[
+                {
+                    "type":"click",
+                    "name":"服务接待",
+                    "key":"key20"
+                },
+                {
+                    "type":"view",
+                    "name":"在线缴费7",
+                    "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx794f2868ad431638"
+                           "&redirect_uri=http%3A%2F%2F"
+                           "vnuxs6.natappfree.cc/jsapi_wx"
+                           "&response_type=code&scope=snsapi_base&state=123#wechat_redirect"
+                }
+            ]
+        }
+    ]
 }
 
 access_token = getAT.getAT();
