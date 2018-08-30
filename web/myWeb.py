@@ -8,14 +8,20 @@ import  web
 render = web.template.render('templates/')
 
 urls = (
-  '/', 'index'
+    '/(.*)/', 'redirect',
+    '/(.*)', 'index'
 )
 
+db = web.database(dbn='sqlite', db='mydata')
+
 class index:
-    def GET(self):
-        # return "Hello, world!"
-        name = 'Bob'
-        return render.index(name)
+    def GET(self, name):
+        i = web.input(name=None)
+        return render.index(i.name)
+
+class redirect:
+    def GET(self, path):
+        web.seeother('/' + path)
 
 if __name__ == "__main__":
     app = web.application(urls, globals())
