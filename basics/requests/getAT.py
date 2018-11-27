@@ -16,3 +16,7 @@ def getAT():
         access_token = comments[u'access_token']
 
     return access_token
+
+if __name__ == '__main__':
+    print 'get access token..'
+    print getAT()
