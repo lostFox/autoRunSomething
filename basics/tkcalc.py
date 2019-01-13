@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """tkcalc.pyw 简单的计算器
 """
 import tkinter as tk
