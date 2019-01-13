@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #import PIL
 
 #print('hello, world!')
@@ -31,9 +32,10 @@ for i in range(6):
 
 def getColors():
     #find /usr/local/Cellar/python/3.7.1/ -name "rgb*"
-    rgb_path = '/usr/local/Cellar/python/3.7.1//Frameworks/Python.framework/Versions/3.7/share/doc/python3.7/examples/Tools/pynche/X/rgb.txt'
+    # rgb_path = '/usr/local/Cellar/python/3.7.1//Frameworks/Python.framework/Versions/3.7/share/doc/python3.7/examples/Tools/pynche/X/rgb.txt'
+    rgb_path = './rgb.txt'
     colors = []
-    with open(rgb_path) as file:  # 打开文件
+    with open(rgb_path, ) as file:  # 打开文件
         for line in file:  # 每次读取一行
             if not (line.isspace() or line.startswith("!")):  # 空行或!打头的行则不必处理
                 # 最后一个制表符之后的字符串 split("\t")[-1]
