@@ -1,0 +1,9 @@
+SCMS DEFINITIONS AUTOMATIC TAGS ::= BEGIN
+Uint8  ::= INTEGER (0..255)
+Uint16 ::= INTEGER (0..65535)
+SignedDataPayload ::= SEQUENCE  {
+      data              Uint8  OPTIONAL,
+      extDataHash       Uint16 OPTIONAL,
+      ...
+  }
+END
