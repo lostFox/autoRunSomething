@@ -2,7 +2,8 @@
 
 import socket, ssl, pprint, time
 
-HOST = '127.0.0.1'
+HOST = 'www.mynginx.com'
+# HOST = '127.0.0.1'
 PORT = 443
 BUFSIZE = 1024
 ADDR = (HOST, PORT)
@@ -11,7 +12,15 @@ ADDR = (HOST, PORT)
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # require a certificate from the server
 
-ssl._create_default_https_context = ssl._create_unverified_context
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    # Legacy Python that doesn't verify HTTPS certificates by default
+    pass
+else:
+    # Handle target environment that doesn't support HTTPS verification
+    ssl._create_default_https_context = _create_unverified_https_context
+
 
 ssl_sock = ssl.wrap_socket(s, ca_certs='./rootCA.pem', cert_reqs=ssl.CERT_REQUIRED)
 # socket connect success
